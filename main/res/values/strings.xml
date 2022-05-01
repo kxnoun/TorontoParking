@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TorontoParking</string>
+    <string name="Title">Toronto Parking Application</string>
+    <string name="Subtitle">Simplify Toronto Parking!</string>
+</resources>
