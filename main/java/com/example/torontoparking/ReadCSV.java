@@ -14,11 +14,11 @@ public class ReadCSV {
             InputStreamReader ip = new InputStreamReader(inputStream);
             CSVReader csvReader = new CSVReader(ip);
             String[] nextRecord;
-            int bruh = 0;
+            int first_line_checker = 0;
 
             while ((nextRecord = csvReader.readNext()) != null) {
-                if (bruh == 0) {
-                    bruh += 1;
+                if (first_line_checker == 0) {
+                    first_line_checker = 1;
                     continue;
                 }
                 ParkingLot pl = new ParkingLot(nextRecord[0], nextRecord[1], nextRecord[2], nextRecord[3], nextRecord[4], nextRecord[5]);
