@@ -2,4 +2,7 @@
     <string name="app_name">TorontoParking</string>
     <string name="Title">Toronto Parking Application</string>
     <string name="Subtitle">Simplify Toronto Parking!</string>
+    <string name="login">Login</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
 </resources>
