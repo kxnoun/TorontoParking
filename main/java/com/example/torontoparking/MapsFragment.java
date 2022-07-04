@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.torontoparking.ui.login.LoginActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -61,18 +62,7 @@ public class MapsFragment extends Fragment {
                 clusterManager.setOnClusterItemInfoWindowClickListener(new ClusterManager.OnClusterItemInfoWindowClickListener<MyItem>() {
                     @Override
                     public void onClusterItemInfoWindowClick(MyItem item) {
-                        Intent i = new Intent(getActivity(), InformationActivity.class);
-                        for (ParkingLot p: parkingLots) {
-                            if (p.name.equals(item.getTitle())) {
-                                i.putExtra("assetNumber", p.assetNumber);
-                                i.putExtra("name", p.name);
-                                i.putExtra("parkingSpaces", p.parkingSpaces);
-                                i.putExtra("handicapSpaces", p.handicapSpaces);
-                                i.putExtra("gis", p.gis);
-                                i.putExtra("access", p.access);
-                            }
-                        }
-                        startActivity(i);
+                        openInformationActivity(parkingLots, item);
                     }
                 });
 
@@ -80,6 +70,22 @@ public class MapsFragment extends Fragment {
 
         }
     };
+
+    public void openInformationActivity(ArrayList<ParkingLot> parkingLots, MyItem item) {
+        Intent i = new Intent(getActivity(), InformationActivity.class);
+        for (ParkingLot p: parkingLots) {
+            if (p.name.equals(item.getTitle())) {
+                i.putExtra("assetNumber", p.assetNumber);
+                i.putExtra("name", p.name);
+                i.putExtra("parkingSpaces", p.parkingSpaces);
+                i.putExtra("handicapSpaces", p.handicapSpaces);
+                i.putExtra("gis", p.gis);
+                i.putExtra("access", p.access);
+            }
+        }
+        startActivity(i);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
