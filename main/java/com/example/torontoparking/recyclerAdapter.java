@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyViewHolder>{
 
-    private final ArrayList<ParkingLot> parkingLots;
+    private ArrayList<ParkingLot> parkingLots;
     Context context;
 
     public recyclerAdapter(Context context, ArrayList<ParkingLot> parkingLots) {
@@ -24,7 +24,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         private final TextView parkingName;
 
-        public MyViewHolder(final View view) {
+        public MyViewHolder(View view) {
             super(view);
             parkingName = view.findViewById(R.id.textName);
         }
@@ -46,5 +46,10 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     @Override
     public int getItemCount() {
         return parkingLots.size();
+    }
+
+    public void filterList(ArrayList<ParkingLot> filteredList) {
+        parkingLots = filteredList;
+        notifyDataSetChanged();
     }
 }

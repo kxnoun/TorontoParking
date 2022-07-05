@@ -2,6 +2,7 @@ package com.example.torontoparking;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -22,6 +23,8 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        SearchView searchView = findViewById(R.id.searchView);
+
         RecyclerView recyclerView = findViewById(R.id.RecyclerView);
 
         ArrayList<ParkingLot> parkingLots = ReadCSV.readCSV(getResources().openRawResource(R.raw.parking));
@@ -32,6 +35,26 @@ public class SearchActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         SearchActivity context = this;
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                ArrayList<ParkingLot> filteredList = new ArrayList<>();
+                for (ParkingLot p: parkingLots) {
+                    if (p.name.toLowerCase().contains(newText.toLowerCase())) {
+                        filteredList.add(p);
+                    }
+                }
+                adapter.filterList(filteredList);
+                return true;
+            }
+        });
+
 
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(this, recyclerView ,new RecyclerItemClickListener.OnItemClickListener() {
@@ -53,4 +76,5 @@ public class SearchActivity extends AppCompatActivity {
                 })
         );
     }
+
 }
