@@ -3,7 +3,6 @@ package com.example.torontoparking;
 public class User {
 
     public String firstName, lastName, email;
-
     public User() {
 
     }

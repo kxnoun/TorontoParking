@@ -85,7 +85,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    Intent i = new Intent(LoginActivity.this, ProfileActivity.class);
+                    MainActivity.loggedIn = true;
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
 
                     if (user.isEmailVerified()) {
                         startActivity(i);

@@ -9,14 +9,23 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static boolean loggedIn = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button loginButton = (Button) findViewById(R.id.Login_Button);
 
-        Button login_btn = (Button) findViewById(R.id.Login_Button);
-        login_btn.setOnClickListener(new View.OnClickListener() {
+        if (loggedIn) {
+            loginButton.setText("PROFILE");
+        }
+        else {
+            loginButton.setText("LOGIN");
+        }
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openLoginActivity();
@@ -32,7 +41,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openLoginActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent;
+        if (!loggedIn) {
+            intent = new Intent(this, LoginActivity.class);
+        }
+        else {
+            intent = new Intent(this, ProfileActivity.class);
+        }
         startActivity(intent);
     }
 

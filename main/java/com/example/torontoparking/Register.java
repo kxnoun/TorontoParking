@@ -97,6 +97,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(Register.this, "Success! You have been registered!", Toast.LENGTH_LONG).show();
+
                                         Intent i = new Intent(Register.this, LoginActivity.class);
                                         startActivity(i);
                                     }
