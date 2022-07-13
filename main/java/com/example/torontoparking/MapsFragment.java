@@ -65,13 +65,15 @@ public class MapsFragment extends Fragment {
 
     public void openInformationActivity(ArrayList<ParkingLot> parkingLots, MyItem item) {
         Intent i = new Intent(getActivity(), InformationActivity.class);
+        Intent j = new Intent(getActivity(), IdleMapsFragment.class);
         for (ParkingLot p: parkingLots) {
             if (p.name.equals(item.getTitle())) {
                 i.putExtra("assetNumber", p.assetNumber);
                 i.putExtra("name", p.name);
                 i.putExtra("parkingSpaces", p.parkingSpaces);
                 i.putExtra("handicapSpaces", p.handicapSpaces);
-                i.putExtra("gis", p.gis);
+                i.putExtra("lat", p.getLat());
+                i.putExtra("long", p.getLong());
                 i.putExtra("access", p.access);
             }
         }

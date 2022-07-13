@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Register extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-    private EditText firstName, lastName, email, password;
+    private EditText firstName, lastName, email, password, phoneNumber;
     private ProgressBar progressBar;
     private Button registerButton;
 
@@ -42,6 +42,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         lastName = (EditText) findViewById(R.id.editTextRegisterLast);
         email = (EditText) findViewById(R.id.editTextRegisterEmailAddress);
         password = (EditText) findViewById(R.id.editTextRegisterPassword);
+        phoneNumber = (EditText) findViewById(R.id.editTextPhone);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBarRegister);
 
@@ -60,6 +61,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         String passwordText = password.getText().toString().trim();
         String firstText = firstName.getText().toString().trim();
         String lastText = lastName.getText().toString().trim();
+        String phoneText = phoneNumber.getText().toString().trim();
 
         if (firstText.isEmpty()) {
             firstName.setError("Please Provide your First Name");
@@ -81,6 +83,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             password.requestFocus();
             return;
         }
+
+        if (phoneText.isEmpty() || !Patterns.PHONE.matcher(phoneText).matches()) {
+            phoneNumber.setError("Please provide a valid phone number");
+            phoneNumber.requestFocus();
+            return;
+        }
+
         progressBar.setVisibility(View.VISIBLE);
 
         mAuth.createUserWithEmailAndPassword(emailText, passwordText)
@@ -88,7 +97,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    User user = new User(firstText, lastText, emailText);
+                    User user = new User(firstText, lastText, emailText, phoneText);
 
                     FirebaseDatabase.getInstance().getReference("users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

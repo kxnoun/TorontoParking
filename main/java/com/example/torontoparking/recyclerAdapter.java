@@ -40,11 +40,15 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull recyclerAdapter.MyViewHolder holder, int position) {
         String name = parkingLots.get(position).name;
-        holder.parkingName.setText(name);
+        if (name.length() > 30) {
+            holder.parkingName.setText(name.substring(0, 27).concat(" . . . "));
+        }
+        else {holder.parkingName.setText(name);}
     }
 
     @Override
     public int getItemCount() {
+
         return parkingLots.size();
     }
 

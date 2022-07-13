@@ -29,6 +29,10 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         Button logout = (Button) findViewById(R.id.logoutButton);
+        Button resetButton = (Button) findViewById(R.id.resetUserData);
+        Button favorites = (Button) findViewById(R.id.favoritesButton);
+        Button recentlyViewed = (Button) findViewById(R.id.recentlyViewedButton);
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        TextView userFirstName = (TextView) findViewById(R.id.userName);
         TextView firstName = (TextView) findViewById(R.id.userFirstName);
         TextView lastName = (TextView) findViewById(R.id.userLastName);
         TextView email = (TextView) findViewById(R.id.userEmail);
@@ -52,15 +57,26 @@ public class ProfileActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User userProfile = snapshot.getValue(User.class);
                 if (userProfile != null) {
+                    String greeting = "Hello, ".concat(userProfile.firstName).concat("!");
+                    userFirstName.setText(greeting);
                     firstName.setText(userProfile.firstName);
                     lastName.setText(userProfile.lastName);
                     email.setText(userProfile.email);
+                    phone.setText(userProfile.phoneNumber);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(ProfileActivity.this, "Something wrong happened!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ProfileActivity.this, AddPhoneActivity.class);
+
             }
         });
 

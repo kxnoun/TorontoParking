@@ -32,8 +32,8 @@
         android:id="@+id/editTextRegisterFirst"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:layout_marginTop="36dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="20dp"
         android:autofillHints=""
         android:ems="10"
@@ -49,10 +49,10 @@
     <EditText
         android:id="@+id/editTextRegisterPassword"
         android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_height="59dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/prompt_password"
@@ -66,10 +66,10 @@
     <EditText
         android:id="@+id/editTextRegisterLast"
         android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_height="59dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/prompt_last"
@@ -84,10 +84,10 @@
     <EditText
         android:id="@+id/editTextRegisterEmailAddress"
         android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_height="59dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/prompt_email"
@@ -102,16 +102,16 @@
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegisterPassword"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintVertical_bias="0.141" />
 
     <ProgressBar
         android:id="@+id/progressBarRegister"
@@ -124,5 +124,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/prompt_phone"
+        android:inputType="phone"
+        android:textColorHint="#78909C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegisterPassword"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

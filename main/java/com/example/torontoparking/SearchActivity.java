@@ -65,7 +65,8 @@ public class SearchActivity extends AppCompatActivity {
                         i.putExtra("name", currentParking.name);
                         i.putExtra("parkingSpaces", currentParking.parkingSpaces);
                         i.putExtra("handicapSpaces", currentParking.handicapSpaces);
-                        i.putExtra("gis", currentParking.gis);
+                        i.putExtra("lat", currentParking.getLat());
+                        i.putExtra("long", currentParking.getLong());
                         i.putExtra("access", currentParking.access);
                         startActivity(i);
                     }
