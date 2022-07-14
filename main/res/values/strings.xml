@@ -24,4 +24,9 @@
     <string name="logout">"Logout"</string>
     <string name="recent">"Recently Viewed"</string>
     <string name="reset">"Reset"</string>
+    <string name="add_favorite">"Favorite"</string>
+    <string name="remove_favorite">"Unfavorite"</string>
+    <string name="reserve">"Reserve"</string>
+
+
 </resources>
