@@ -1,4 +1,62 @@
 <resources>
+
+    <string-array name="colors">
+        <item>SELECT COLOR</item>
+        <item>BLACK</item>
+        <item>GRAY</item>
+        <item>WHITE</item>
+        <item>RED</item>
+        <item>BLUE</item>
+        <item>BROWN</item>
+        <item>GREEN</item>
+        <item>YELLOW</item>
+        <item>OTHER</item>
+    </string-array>
+
+    <string-array name="size">
+        <item>SELECT SIZE</item>
+        <item>SMALL</item>
+        <item>MEDIUM</item>
+        <item>LARGE</item>
+    </string-array>
+
+    <string-array name="times">
+        <item>SELECT TIME</item>
+        <item>1:00</item>
+        <item>2:00</item>
+        <item>3:00</item>
+        <item>4:00</item>
+        <item>5:00</item>
+        <item>6:00</item>
+        <item>7:00</item>
+        <item>8:00</item>
+        <item>9:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+    </string-array>
+
+    <string-array name="period">
+        <item>SELECT PERIOD</item>
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+    <string-array name="day">
+        <item>SELECT DAY</item>
+        <item>Today</item>
+        <item>Tomorrow</item>
+        <item>After-Tomorrow</item>
+    </string-array>
+
+    <string-array name="duration">
+        <item>SELECT DURATION</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>4 hours</item>
+    </string-array>
+
     <string name="app_name">TorontoParking</string>
     <string name="Title">Toronto Parking Application</string>
     <string name="Subtitle">Simplify Toronto Parking!</string>
@@ -27,6 +85,13 @@
     <string name="add_favorite">"Favorite"</string>
     <string name="remove_favorite">"Unfavorite"</string>
     <string name="reserve">"Reserve"</string>
+    <string name="vehicle_register">"Vehicle Registration"</string>
+    <string name="prompt_date">Date</string>
+    <string name="prompt_time">Time</string>
+    <string name="additional_information">Additional Information</string>
+    <string name="handicap">Handicap</string>
+    <string name="duration">Duration</string>
+    <string name="period">Period</string>
 
 
 </resources>

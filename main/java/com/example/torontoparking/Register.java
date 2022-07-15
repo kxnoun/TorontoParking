@@ -94,35 +94,35 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
         mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    User user = new User(firstText, lastText, emailText, phoneText);
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            User user = new User(firstText, lastText, emailText, phoneText);
 
-                    FirebaseDatabase.getInstance().getReference("users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-                                        Toast.makeText(Register.this, "Success! You have been registered!", Toast.LENGTH_LONG).show();
+                            FirebaseDatabase.getInstance().getReference("users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(Register.this, "Success! You have been registered!", Toast.LENGTH_LONG).show();
 
-                                        Intent i = new Intent(Register.this, LoginActivity.class);
-                                        startActivity(i);
-                                    }
-                                    else {
-                                        Toast.makeText(Register.this, "Failed to register. Please try again.", Toast.LENGTH_LONG).show();
-                                    }
-                                    progressBar.setVisibility(View.GONE);
-                                }
-                            });
-                }
-                else {
-                    Toast.makeText(Register.this, "Failed to register. Please try again.", Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
-                }
-            }
-        });
+                                                Intent i = new Intent(Register.this, LoginActivity.class);
+                                                startActivity(i);
+                                            }
+                                            else {
+                                                Toast.makeText(Register.this, "Failed to register. Please try again.", Toast.LENGTH_LONG).show();
+                                            }
+                                            progressBar.setVisibility(View.GONE);
+                                        }
+                                    });
+                        }
+                        else {
+                            Toast.makeText(Register.this, "Failed to register. Please try again.", Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }
+                });
 
 
     }

@@ -3,6 +3,7 @@ package com.example.torontoparking;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -64,7 +65,8 @@ public class InformationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (MainActivity.loggedIn) {
-
+                    Intent i = new Intent(InformationActivity.this, ReservationActivity.class);
+                    startActivity(i);
                 }
                 else {
                     Toast.makeText(InformationActivity.this, "Login to reserve a parking!", Toast.LENGTH_LONG).show();
