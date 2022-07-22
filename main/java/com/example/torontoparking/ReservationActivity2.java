@@ -1,6 +1,7 @@
 package com.example.torontoparking;
 
-import android.os.Build;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class ReservationActivity2 extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,8 +27,6 @@ public class ReservationActivity2 extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reservation2);
-
-
 
         dateSpinner = (Spinner) findViewById(R.id.dateSpinner);
         timeSpinner = (Spinner) findViewById(R.id.timeSpinner);
@@ -84,7 +84,20 @@ public class ReservationActivity2 extends AppCompatActivity implements View.OnCl
             Toast.makeText(ReservationActivity2.this, "Please choose a duration!", Toast.LENGTH_LONG).show();
             return;
         }
+
+        Intent i = new Intent(ReservationActivity2.this, ConfirmationActivity.class);
+        i.putExtra("vehicle", getIntent().getStringExtra("vehicle"));
+        i.putExtra("date", DateSpinnerClass.dateChoice);
+        i.putExtra("time", TimeSpinnerClass.timeChoice);
+        i.putExtra("period", PeriodSpinnerClass.periodChoice);
+        i.putExtra("duration", DurationSpinnerClass.durationChoice);
+        i.putExtra("name", getIntent().getStringExtra("name"));
+        i.putExtra("parkingSpaces", getIntent().getStringExtra("parkingSpaces"));
+        startActivity(i);
+
     }
+
+
 
     static class DateSpinnerClass implements AdapterView.OnItemSelectedListener
     {

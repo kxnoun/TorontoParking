@@ -66,6 +66,8 @@ public class InformationActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (MainActivity.loggedIn) {
                     Intent i = new Intent(InformationActivity.this, ReservationActivity.class);
+                    i.putExtra("name", getIntent().getStringExtra("name"));
+                    i.putExtra("parkingSpaces", getIntent().getStringExtra("parkingSpaces"));
                     startActivity(i);
                 }
                 else {

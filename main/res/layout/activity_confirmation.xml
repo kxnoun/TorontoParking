@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".ConfirmationActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Success!"
+        android:layout_marginBottom="20dp"
+
+        android:textColor="#7B1FA2"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Your Confirmation Code" />
+
+    <TextView
+        android:id="@+id/parkingConfirmationNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Not_Applicable"
+        android:layout_marginBottom="30dp"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/additional_information" />
+
+    <TextView
+        android:id="@+id/parkingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/Not_Applicable"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/parkingLotConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/Not_Applicable"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/parkingVehicleConfirmation"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Not_Applicable"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/parkingFullName"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Not_Applicable"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/parkingSpaceNumberConfirmation"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Not_Applicable"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -75,7 +75,6 @@ public class ProfileActivity extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ProfileActivity.this, AddPhoneActivity.class);
 
             }
         });

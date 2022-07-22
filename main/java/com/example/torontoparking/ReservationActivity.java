@@ -79,7 +79,15 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
                 plateNumber.getText().toString().trim()
         );
         Intent i = new Intent(ReservationActivity.this, ReservationActivity2.class);
+        i.putExtra("vehicle",
+                SizeSpinnerClass.choice2.concat(" ").concat(ColorSpinnerClass.choice1).concat(" ")
+                        .concat(brand.getText().toString().trim()).concat(" ").concat(plateNumber.getText().toString().trim()));
+        i.putExtra("name", getIntent().getStringExtra("name"));
+        i.putExtra("parkingSpaces", getIntent().getStringExtra("parkingSpaces"));
         startActivity(i);
+
+
+
     }
 
 

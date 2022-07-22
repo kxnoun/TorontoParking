@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TorontoParking">
         <activity
+            android:name=".ConfirmationActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ReservationActivity2"
             android:exported="false" />
         <activity
@@ -20,9 +23,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
 
-        <activity
-            android:name=".AddPhoneActivity"
-            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
