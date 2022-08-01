@@ -10,6 +10,8 @@ TorontoParking is a Smart Android Application that aims to simplify the "Toronto
 
 ![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/information_page.jpg "Information Activity")
 
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/information_page.jpg" alt="Information Activity" width="100"/>
+
 3. Utilizing Google Maps API, we plot all the parking lot facilities using markers and use clustering for efficiency and design purposes.
 
 ![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/main_page.jpg "Clustering")
