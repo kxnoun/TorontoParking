@@ -8,37 +8,35 @@ TorontoParking is a Smart Android Application that aims to simplify the "Toronto
 1. We collect data on Toronto parking locations using their [open data](https://open.toronto.ca/dataset/parking-lot-facilities/).
 2. Then we create information activities that contains the parking lot information which users can view.
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/information_page.jpg "Information Activity")
-
-<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/information_page.jpg" alt="Information Activity" width="100"/>
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/information_page.jpg" alt="Information Activity" width="300"/>
 
 3. Utilizing Google Maps API, we plot all the parking lot facilities using markers and use clustering for efficiency and design purposes.
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/main_page.jpg "Clustering")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/main_page.jpg" alt="Clustering" width="300"/>
 
 4. To open a specific parking lot's information activity, users can utilize the search feature to search by name or the maps feature to search by location.
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/clicked_marker_page.jpg "Clicked Marker")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/clicked_marker_page.jpg" alt="Clicked Marker" width="300"/>
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/search_page.jpg "Search Feature")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/search_page.jpg" alt="Search Feature" width="300"/>
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/search_button_page.jpg "Search Click Feature")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/search_button_page.jpg" alt="Search Click Feature" width="300"/>
 
 5. To use more features, users can easily create and log into an account using their email and password (with Firebase auth and real time database).
 
-[Register Page](https://github.com/kxnoun/TorontoParking/blob/main/README_images/register_page.jpg)
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/register_page.jpg" alt="Register Page" width="300"/>
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/login_page.jpg "Login Page")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/login_page.jpg" alt="Login Page" width="300"/>
 
 6. To reserve, users must register their vehicle and enter a valid date/time.
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/vehicle_register_page.jpg "Vehicle Registration")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/vehicle_register_page.jpg" alt="Vehicle Registration" width="300"/>
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/date_register_page.jpg "Date and Time")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/date_register_page.jpg" alt="Date and Time" width="300"/>
 
 7. Finally, the reservation is complete.
 
-![alt text](https://github.com/kxnoun/TorontoParking/blob/main/README_images/confirmation_page.jpg "Confirmation Page")
+<img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/confirmation_page.jpg" alt="Confirmation Page" width="300"/>
 
 ## Future Plans
 
