@@ -25,7 +25,7 @@
 
 4. **Search & Access**: To open a specific parking lot's information activity, users can utilize the search feature to search by name or the maps feature to search by location.
 
-<p align="left">
+<p align="center">
   <img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/clicked_marker_page.jpg" alt="Clicked Marker" width="290"/>
   <img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/search_page.jpg" alt="Search Feature" width="290"/>
   <img src="https://github.com/kxnoun/TorontoParking/blob/main/README_images/search_button_page.jpg" alt="Search Click Feature" width="290"/>
